@@ -230,7 +230,7 @@ public class EasyPermissions {
 
             // Report denied permissions, if any.
             if (!denied.isEmpty()) {
-                if (object instanceof PermissionCallbacks) {
+                if (object instanceof PermissionCallbacks) { // TODO: Fix this, now returns false
                     ((PermissionCallbacks) object).onPermissionsDenied(requestCode, denied);
                 }
             }
