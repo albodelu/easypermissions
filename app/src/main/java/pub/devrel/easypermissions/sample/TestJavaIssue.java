@@ -1,7 +1,6 @@
 package pub.devrel.easypermissions.sample;
 
 import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
 
 import java.util.List;
 
@@ -9,7 +8,7 @@ import pub.devrel.easypermissions.EasyPermissions;
 
 public class TestJavaIssue {
 
-    public interface PermissionCallbacks extends EasyPermissions.PermissionCallbacks {
+    public interface TestJavaCallbacks extends EasyPermissions.PermissionCallbacks {
 
         void onPermissionsGranted(int requestCode, List<String> perms);
 
