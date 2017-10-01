@@ -13,6 +13,7 @@ object TestIssue {
 
     fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray,
                                    vararg receivers: Any) {
-        EasyPermissions.onRequestPermissionsResult(requestCode, permissions, grantResults, receivers)
+        // Use spread operator https://kotlinlang.org/docs/reference/java-interop.html#java-varargs
+        EasyPermissions.onRequestPermissionsResult(requestCode, permissions, grantResults, *receivers)
     }
 }

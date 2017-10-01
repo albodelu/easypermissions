@@ -5,14 +5,14 @@ import android.util.Log
 import pub.devrel.easypermissions.AppSettingsDialog
 import pub.devrel.easypermissions.EasyPermissions
 
-abstract class BaseActivity : AppCompatActivity(), TestJavaIssue.TestJavaCallbacks {
+abstract class BaseActivity : AppCompatActivity(), TestIssue.TestCallbacks {
     override fun onRequestPermissionsResult(requestCode: Int,
                                             permissions: Array<String>,
                                             grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
 
         // EasyPermissions handles the request result.
-        TestJavaIssue.onRequestPermissionsResult(requestCode, permissions, grantResults, this)
+        TestIssue.onRequestPermissionsResult(requestCode, permissions, grantResults, this)
     }
 
     override fun onPermissionsGranted(requestCode: Int, perms: List<String>) {
