@@ -12,7 +12,7 @@ abstract class BaseActivity : AppCompatActivity(), TestIssue.TestCallbacks {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
 
         // EasyPermissions handles the request result.
-        TestIssue.onRequestPermissionsResult(requestCode, permissions, grantResults, this)
+        EasyPermissions.onRequestPermissionsResult(requestCode, permissions, grantResults, this)
     }
 
     override fun onPermissionsGranted(requestCode: Int, perms: List<String>) {
